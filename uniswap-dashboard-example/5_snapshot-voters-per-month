@@ -1,0 +1,10 @@
+SELECT 
+date_trunc('month',FROM_UNIXTIME(created)) AS month, 
+COUNT(voter) AS "votes per month",
+COUNT(DISTINCT voter) AS "voters per month"
+
+FROM snapshot.votes
+WHERE space = 'uniswap'
+
+GROUP BY 1
+ORDER BY month ASC

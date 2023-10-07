@@ -1,0 +1,12 @@
+SELECT 
+space,
+FROM_UNIXTIME(created) AS vote_timestamp,
+voter,
+choice,
+proposal,
+id
+
+FROM snapshot.votes
+WHERE space = 'uniswap'
+
+ORDER BY created DESC

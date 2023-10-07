@@ -1,0 +1,17 @@
+SELECT
+  "amounts airdropped",
+  frequency,
+  frequency * 100.0 / SUM(frequency) OVER () AS frequency_percent
+FROM (
+  SELECT 
+    FLOOR(amount_original / 400) * 400 AS "amounts airdropped",
+    COUNT(amount_original) AS frequency
+  FROM uniswap_ethereum.airdrop_claims
+  GROUP BY 1
+) subquery
+ORDER BY "amounts airdropped" ASC;
+
+
+
+
+

@@ -1,0 +1,19 @@
+SELECT
+  vote_frequency,
+  COUNT(*) AS voters_count
+FROM
+  (
+    SELECT
+      voter,
+      COUNT(*) AS vote_frequency
+    FROM
+      snapshot.votes
+    WHERE
+      space = 'uniswap'
+    GROUP BY
+      voter
+  ) subquery
+GROUP BY
+  vote_frequency
+ORDER BY
+  vote_frequency DESC;

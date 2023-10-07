@@ -1,0 +1,10 @@
+SELECT 
+  recipient,
+  FROM_UNIXTIME(created) AS vote_timestamp,
+  proposal
+FROM
+  uniswap_ethereum.airdrop_claims c
+  JOIN snapshot.votes s ON c.recipient = CAST(s.voter AS VARCHAR (255))
+WHERE
+  space = 'uniswap'
+ORDER BY created ASC

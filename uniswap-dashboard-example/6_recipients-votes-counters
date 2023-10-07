@@ -1,0 +1,11 @@
+SELECT
+  COUNT(*) AS total_votes,
+  COUNT(DISTINCT s.voter) AS total_voters,
+  TRY_CAST(COUNT(DISTINCT s.voter) AS REAL) / 220276 * 100 AS percentage_of_voters,
+  COUNT(*) / COUNT(DISTINCT proposal) AS average_votes_per_proposal,
+  COUNT(*) /  COUNT(DISTINCT s.voter) AS average_votes
+FROM uniswap_ethereum.airdrop_claims AS c
+JOIN snapshot.votes AS s 
+  ON c.recipient = s.voter
+WHERE
+  space = 'uniswap'
