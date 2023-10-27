@@ -1,7 +1,14 @@
 # governance-activity-of-airdrop-recipients
-Master thesis University of Mittweida
 
-Links to the Dashboard on Dune Analytics:
+**An empirical analysis of 19 DAO airdrops with regard to the governance activity of the recipients**
+Master thesis University of Mittweida: Airdrops as a governance tool for DAOs?
+
+abstract
+describe how the dashboard is structured (make an explanation comment on every query)
+
+The data was retrieved using SQL queries on the [Dune Analytics](https://dune.com/) platform.
+Links to the Dashboards on Dune Analytics:
+
 - [Optimism 1](https://dune.com/bitblondy/optimism1-governance-activity-of-airdrop-recipients)
 - [Arbitrum](https://dune.com/bitblondy/arbitrum-governance-activity-of-airdrop-recipients)
 - [Uniswap](https://dune.com/bitblondy/uniswap-governance-activity-of-airdrop-recipients)
@@ -21,6 +28,3 @@ Links to the Dashboard on Dune Analytics:
 - [OpenDAO](https://dune.com/bitblondy/opendao-governance-activity-of-airdrop-recipients)
 - [Apecoin](https://dune.com/bitblondy/apecoin-governance-activity-of-airdrop-recipients)
 - [Convex Finance](https://dune.com/bitblondy/convex-governance-activity-of-airdrop-recipients)
-
-
-
