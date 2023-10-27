@@ -1,3 +1,5 @@
+-- bar chart showing the unique voters and the total votes per month in the uniswap snapshot space
+
 SELECT 
 date_trunc('month',FROM_UNIXTIME(created)) AS month, 
 COUNT(voter) AS "votes per month",

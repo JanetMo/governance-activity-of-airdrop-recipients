@@ -1,3 +1,5 @@
+-- table calculating the vote frequency of airdrop recipients in the uniswap snapshot space
+
 SELECT
   vote_frequency,
   COUNT(*) AS voters_count,

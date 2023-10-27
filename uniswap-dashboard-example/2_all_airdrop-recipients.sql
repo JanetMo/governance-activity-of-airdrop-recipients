@@ -1,3 +1,4 @@
+-- table listing all airdrop recipients 
 SELECT 
 project,
 token_symbol,

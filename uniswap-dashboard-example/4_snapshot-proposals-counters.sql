@@ -1,3 +1,5 @@
+-- some basic data about the uniswap snapshot space
+
 SELECT
  COUNT (*) AS "number of proposals",
  MIN(FROM_UNIXTIME(created)) AS "first proposal",

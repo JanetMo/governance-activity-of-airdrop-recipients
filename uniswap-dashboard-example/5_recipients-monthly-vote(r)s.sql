@@ -1,3 +1,5 @@
+-- bar chart showing the unique airdrop voters and the total airdrop votes per month in the uniswap snapshot space
+
 SELECT 
   DATE_TRUNC('month', FROM_UNIXTIME(created)) AS month,
   COUNT(*) AS vote_count,

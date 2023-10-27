@@ -1,3 +1,6 @@
+-- table calculating the 90 and 99 percentiles according to the amounts received 
+-- percentage of the tokend distributed to the top 10% of recipients
+
 WITH PercentileRanges AS (
   SELECT
     0.0 AS percentile_start,

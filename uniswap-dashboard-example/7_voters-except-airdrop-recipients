@@ -1,7 +1,0 @@
-SELECT
-  COUNT(DISTINCT v.voter) AS distinct_voter_count
-FROM snapshot.votes AS v
-LEFT JOIN uniswap_ethereum.airdrop_claims AS a
-ON CAST(v.voter AS VARCHAR) = a.recipient
-WHERE
-  v.space = 'uniswap' AND a.recipient IS NULL

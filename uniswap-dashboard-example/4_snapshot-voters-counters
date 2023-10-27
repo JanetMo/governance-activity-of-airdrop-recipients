@@ -1,7 +1,0 @@
- SELECT
-  COUNT(DISTINCT voter) AS "unique voters",
-  COUNT(voter) AS "total votes",
-  COUNT(voter) / COUNT(DISTINCT voter) AS "average votes per voter"
-FROM snapshot.votes
-WHERE
-  space = 'uniswap'

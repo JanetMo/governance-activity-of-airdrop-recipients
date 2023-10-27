@@ -1,17 +1,20 @@
+-- table and bar chart that show the actions recipients since the airdrop
+-- which share of airdrop recipients held, transferred, partially transferred or increased their position
+
 WITH tokens AS (
   SELECT
     contract_address,
     symbol,
     decimals
   FROM tokens.erc20
-  WHERE contract_address = 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984
+  WHERE contract_address = 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 -- contract address of UNI to get all transfers
   LIMIT 1
 ), addresses AS (
       SELECT DISTINCT
       (account) AS "Addresses",
-      amount / CAST(POWER(10, 18) AS DOUBLE) AS "Airdropped Amount"
+      amount / CAST(POWER(10, 18) AS DOUBLE)  AS "Airdropped Amount"
     FROM
-      uniswap_ethereum.MerkleDistributor_evt_Claimed
+      uniswap_ethereum.MerkleDistributor_evt_Claimed -- table with the airdrop recipients
 ), flow AS (
   SELECT
     evt_block_time,
@@ -59,7 +62,7 @@ WITH tokens AS (
     CASE WHEN "Balance" > 1 THEN 1 ELSE 0 END AS "Posses UNI Still",
     CASE
       WHEN "Balance" < 1
-      THEN 'transferred'
+      THEN 'transferred' 
       WHEN "Balance" > 1 AND "Balance" < "Airdropped Amount"
       THEN 'partially transferred'
       WHEN "Balance" > 1 AND "Balance" > "Airdropped Amount"

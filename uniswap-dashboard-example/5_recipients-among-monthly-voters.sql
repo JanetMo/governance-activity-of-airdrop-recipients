@@ -1,3 +1,5 @@
+-- bar chart showing the unique airdrop voters among the total voters per month in the uniswap snapshot space
+
 SELECT
   t1.month,
   t1."voters per month" AS total_voters,

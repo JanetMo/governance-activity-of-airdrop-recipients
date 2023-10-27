@@ -1,3 +1,5 @@
+-- table listing all proposals in the uniswap Snapshot space
+
 SELECT
   ROW_NUMBER() OVER (ORDER BY start) AS proposal_nr,
   space,

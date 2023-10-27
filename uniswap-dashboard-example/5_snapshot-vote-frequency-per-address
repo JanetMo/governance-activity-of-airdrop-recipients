@@ -1,9 +1,0 @@
-SELECT
-  voter,
-  COUNT(*) AS vote_frequency
-FROM
-  snapshot.votes
-WHERE
-  space = 'uniswap'
-GROUP BY voter
-ORDER BY vote_frequency DESC

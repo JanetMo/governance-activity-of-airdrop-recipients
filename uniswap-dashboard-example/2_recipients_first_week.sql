@@ -1,3 +1,4 @@
+-- counter that diplays the share of recipients that claimed within the first seven days
 SELECT 
     SUM("recipients per day") AS "total recipients for 7 days",
     (SELECT COUNT(DISTINCT recipient) FROM uniswap_ethereum.airdrop_claims) AS "total recipients",

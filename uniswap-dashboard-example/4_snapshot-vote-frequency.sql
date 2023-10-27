@@ -1,3 +1,5 @@
+-- table calculating the vote frequency and the share of voters in these frequencies in the uniswap snapshot space
+
 SELECT
   vote_frequency,
   COUNT(*) AS voters_count,
