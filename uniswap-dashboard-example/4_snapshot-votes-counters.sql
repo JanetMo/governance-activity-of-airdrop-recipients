@@ -20,7 +20,7 @@ CROSS JOIN (
     COUNT(DISTINCT voter) AS unique_voters,
     COUNT(voter) AS total_votes,
     COUNT(voter) / COUNT(DISTINCT voter) AS average_votes_per_voter
-  FROM snapshot.votes -- join with the snapshot voters
+  FROM dune.shot.dataset_votes_view -- join with the snapshot voters
   WHERE
     space = 'uniswap'
 ) AS voters
@@ -47,7 +47,7 @@ CROSS JOIN (
     COUNT(DISTINCT voter) AS unique_voters,
     COUNT(voter) AS total_votes,
     COUNT(voter) / COUNT(DISTINCT voter) AS average_votes_per_voter
-  FROM snapshot.votes
+  FROM dune.shot.dataset_votes_view
   WHERE
     space = 'uniswap'
     AND created BETWEEN 1600291972 AND 1600291972 + 15778458 -- get all votes within six months of the airdrop (unix time)
@@ -75,7 +75,7 @@ CROSS JOIN (
     COUNT(DISTINCT voter) AS unique_voters,
     COUNT(voter) AS total_votes,
     COUNT(voter) / COUNT(DISTINCT voter) AS average_votes_per_voter
-  FROM snapshot.votes
+  FROM dune.shot.dataset_votes_view
   WHERE
     space = 'uniswap'
     AND created BETWEEN 1600291972 AND 1600291972 + 31556916 -- get all votes within twelve months of the airdrop (unix time)

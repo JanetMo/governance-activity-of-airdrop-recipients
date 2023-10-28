@@ -8,7 +8,7 @@ FROM (
   SELECT
     DATE_TRUNC('month', FROM_UNIXTIME(created)) AS month,
     COUNT(DISTINCT voter) AS "voters per month"
-  FROM snapshot.votes
+  FROM dune.shot.dataset_votes_view
   WHERE
     space = 'uniswap'
   GROUP BY
@@ -19,7 +19,7 @@ LEFT JOIN (
     DATE_TRUNC('month', FROM_UNIXTIME(created)) AS month,
     COUNT(DISTINCT recipient) AS unique_voters
   FROM ens_ethereum.airdrop_claims AS c
-  JOIN snapshot.votes AS s
+  JOIN dune.shot.dataset_votes_view AS s
     ON c.recipient = s.voter
   WHERE
     space = 'uniswap'

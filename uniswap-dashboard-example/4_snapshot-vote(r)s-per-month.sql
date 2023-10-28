@@ -5,7 +5,7 @@ date_trunc('month',FROM_UNIXTIME(created)) AS month,
 COUNT(voter) AS "votes per month",
 COUNT(DISTINCT voter) AS "voters per month"
 
-FROM snapshot.votes
+FROM dune.shot.dataset_votes_view
 WHERE space = 'uniswap'
 
 GROUP BY 1

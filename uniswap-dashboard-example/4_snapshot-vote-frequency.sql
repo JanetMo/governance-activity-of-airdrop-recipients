@@ -3,14 +3,14 @@
 SELECT
   vote_frequency,
   COUNT(*) AS voters_count,
-  COUNT(*) * 100.0 / (SELECT COUNT(DISTINCT voter) FROM snapshot.votes WHERE space = 'uniswap') AS voters_percentage
+  COUNT(*) * 100.0 / (SELECT COUNT(DISTINCT voter) FROM dune.shot.dataset_votes_view WHERE space = 'uniswap') AS voters_percentage
 FROM
   (
     SELECT
       voter,
       COUNT(*) AS vote_frequency
     FROM
-      snapshot.votes
+      dune.shot.dataset_votes_view
     WHERE
       space = 'uniswap'
     GROUP BY

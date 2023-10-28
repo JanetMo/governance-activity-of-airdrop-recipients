@@ -6,7 +6,7 @@ SELECT
   COUNT(DISTINCT recipient) AS unique_voters
 FROM
   uniswap_ethereum.airdrop_claims c
-  JOIN snapshot.votes s ON c.recipient = CAST(s.voter AS VARCHAR (255))
+  JOIN dune.shot.dataset_votes_view s ON c.recipient = CAST(s.voter AS VARCHAR (255))
 WHERE
   space = 'uniswap'
 GROUP BY DATE_TRUNC('month', FROM_UNIXTIME(created))

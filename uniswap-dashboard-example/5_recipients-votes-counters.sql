@@ -23,7 +23,7 @@
   COUNT(*) / COUNT(DISTINCT s.voter) AS average_votes_per_voter
 FROM
   uniswap_ethereum.airdrop_claims AS c
-  LEFT JOIN snapshot.votes AS s ON CAST(c.recipient AS varbinary) = s.voter -- join with the snapshot voters
+  LEFT JOIN dune.shot.dataset_votes_view AS s ON CAST(c.recipient AS varbinary) = s.voter -- join with the snapshot voters
 WHERE
   space = 'uniswap'
 
@@ -51,7 +51,7 @@ SELECT
   COUNT(*) / COUNT(DISTINCT s.voter) AS average_votes_per_voter
 FROM
   uniswap_ethereum.airdrop_claims AS c
-  LEFT JOIN snapshot.votes AS s ON CAST(c.recipient AS varbinary) = s.voter
+  LEFT JOIN dune.shot.dataset_votes_view AS s ON CAST(c.recipient AS varbinary) = s.voter
 WHERE
   space = 'uniswap'
   AND created BETWEEN 1600291972 AND 1600291972 + 15778458 -- get the votes of airdrop recipients within six months of the airdrop (unix time)
@@ -80,7 +80,7 @@ SELECT
   COUNT(*) / COUNT(DISTINCT s.voter) AS average_votes_per_voter
 FROM
   uniswap_ethereum.airdrop_claims AS c
-  LEFT JOIN snapshot.votes AS s ON CAST(c.recipient AS varbinary) = s.voter
+  LEFT JOIN dune.shot.dataset_votes_view AS s ON CAST(c.recipient AS varbinary) = s.voter
 WHERE
   space = 'uniswap'
   AND created BETWEEN 1600291972 AND 1600291972 + 31556916 -- get the votes of airdrop recipients within twelve months of the airdrop (unix time)

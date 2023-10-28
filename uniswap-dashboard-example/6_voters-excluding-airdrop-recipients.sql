@@ -29,7 +29,7 @@ SELECT
     FROM TokenHoldersWithoutAirdrop
   ) * 100 AS percentage_voters
 FROM AllTokenHolders AS th
-LEFT JOIN snapshot.votes AS v
+LEFT JOIN dune.shot.dataset_votes_view AS v
   ON th."to" = v.voter
 LEFT OUTER JOIN uniswap_ethereum.airdrop_claims AS ac
   ON TRY_CAST(th."to" AS VARCHAR) = TRY_CAST(ac.recipient AS VARCHAR)

@@ -6,7 +6,7 @@ SELECT
   COUNT(*) * 100.0 / (
     SELECT
       COUNT(DISTINCT avc.recipient)
-    FROM snapshot.votes AS sv
+    FROM dune.shot.dataset_votes_view AS sv
     JOIN uniswap_ethereum.airdrop_claims AS avc
       ON TRY_CAST(sv.voter AS VARCHAR) = avc.recipient
     WHERE
@@ -16,7 +16,7 @@ FROM (
   SELECT
     avc.recipient AS voter,
     COUNT(*) AS vote_frequency
-  FROM snapshot.votes AS sv
+  FROM dune.shot.dataset_votes_view AS sv
   JOIN uniswap_ethereum.airdrop_claims AS avc
     ON TRY_CAST(sv.voter AS VARCHAR) = avc.recipient
   WHERE

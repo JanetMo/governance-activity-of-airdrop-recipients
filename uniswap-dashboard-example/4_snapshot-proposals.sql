@@ -15,6 +15,6 @@ SELECT
   delegation,
   quorum,
   id
-FROM snapshot.proposals
+FROM dune.shot.dataset_proposals_view
 WHERE
   space = 'uniswap'

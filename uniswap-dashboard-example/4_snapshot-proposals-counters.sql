@@ -9,5 +9,5 @@ SELECT
  MIN(votes) AS "minimum of votes",
  MAX(votes) AS "maximum of votes"
 
-FROM snapshot.proposals
+FROM dune.shot.dataset_proposals_view
 WHERE space = 'uniswap'

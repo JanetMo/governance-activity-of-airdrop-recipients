@@ -3,7 +3,7 @@ SELECT
   a.recipient,
   COUNT(*) AS vote_frequency,
   a.amount_original
-FROM snapshot.votes AS v
+FROM dune.shot.dataset_votes_view AS v
 INNER JOIN uniswap_ethereum.airdrop_claims AS a
 ON CAST(v.voter AS VARCHAR) = a.recipient
 WHERE
