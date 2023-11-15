@@ -4,8 +4,7 @@
 
 Master thesis University of Mittweida: Airdrops as a governance tool for DAOs?
 
-abstract,
-describe how the dashboard is structured (make an explanation comment on every query)
+-- abstract --
 
 The data was retrieved using SQL queries on the [Dune Analytics](https://dune.com/) platform.
 Links to the Dashboards on Dune Analytics:

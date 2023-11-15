@@ -1,4 +1,4 @@
--- bar chart showing the unique voters and the total votes per month in the uniswap snapshot space
+-- bar chart showing the unique voters and the total votes per month in the Uniswap Snapshot space
 
 SELECT 
 date_trunc('month',FROM_UNIXTIME(created)) AS month, 

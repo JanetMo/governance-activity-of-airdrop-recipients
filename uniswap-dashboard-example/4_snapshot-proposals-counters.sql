@@ -1,4 +1,4 @@
--- some basic data about the uniswap snapshot space
+-- some basic data about the Uniswap Snapshot space
 
 SELECT
  COUNT (*) AS "number of proposals",

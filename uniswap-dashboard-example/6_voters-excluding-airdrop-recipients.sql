@@ -1,4 +1,4 @@
--- table calculating the share of snapshot voters among all token holders excluding the airdrop recipients
+-- table calculating the share of Snapshot voters among all token holders excluding the airdrop recipients
 
 WITH TokenHoldersWithoutAirdrop AS (
   SELECT DISTINCT

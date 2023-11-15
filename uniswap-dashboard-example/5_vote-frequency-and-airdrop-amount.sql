@@ -1,4 +1,4 @@
--- table and scatter chart diyplaying the airdrop amount and the snapshot vote frequency per recipient
+-- table and scatter chart displaying the airdrop amount and the Snapshot vote frequency per recipient
 SELECT
   a.recipient,
   COUNT(*) AS vote_frequency,

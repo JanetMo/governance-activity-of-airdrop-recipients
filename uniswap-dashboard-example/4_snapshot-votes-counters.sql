@@ -1,4 +1,4 @@
--- table calculating the share of snapshot voters among all token holders
+-- table calculating the share of Snapshot voters among all token holders
 -- for three different points in time: 6 months after the airdrop, 12 months after the airdrop and currently
 
 SELECT
@@ -20,7 +20,7 @@ CROSS JOIN (
     COUNT(DISTINCT voter) AS unique_voters,
     COUNT(voter) AS total_votes,
     COUNT(voter) / COUNT(DISTINCT voter) AS average_votes_per_voter
-  FROM dune.shot.dataset_votes_view -- join with the snapshot voters
+  FROM dune.shot.dataset_votes_view -- join with the Snapshot voters
   WHERE
     space = 'uniswap'
 ) AS voters

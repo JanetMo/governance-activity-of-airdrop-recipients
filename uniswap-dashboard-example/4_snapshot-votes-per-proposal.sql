@@ -1,4 +1,4 @@
--- bar chart showing the total votes per proposal in the uniswap snapshot space 
+-- bar chart showing the total votes per proposal in the Uniswap Snapshot space 
 
 SELECT 
 FROM_UNIXTIME(created) AS created,

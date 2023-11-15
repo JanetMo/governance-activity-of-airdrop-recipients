@@ -1,4 +1,4 @@
--- table listing all proposals in the uniswap Snapshot space
+-- table listing all proposals in the Uniswap Snapshot space
 
 SELECT
   ROW_NUMBER() OVER (ORDER BY start) AS proposal_nr,

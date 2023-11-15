@@ -1,4 +1,4 @@
--- table calculating the vote frequency of airdrop recipients in the uniswap snapshot space
+-- table calculating the vote frequency of airdrop recipients in the Uniswap Snapshot space
 
 SELECT
   vote_frequency,

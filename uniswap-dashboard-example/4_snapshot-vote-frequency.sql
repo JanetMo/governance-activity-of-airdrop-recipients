@@ -1,4 +1,4 @@
--- table calculating the vote frequency and the share of voters in these frequencies in the uniswap snapshot space
+-- table calculating the vote frequency and the share of voters in these frequencies in the Uniswap Snapshot space
 
 SELECT
   vote_frequency,

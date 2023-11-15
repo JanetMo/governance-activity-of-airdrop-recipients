@@ -1,4 +1,4 @@
--- table calculating the share of airdrop recipients among all snapshot voters
+-- table calculating the share of airdrop recipients among all Snapshot voters
 -- for three different points in time: 6 months after the airdrop, 12 months after the airdrop and currently
 
   SELECT
@@ -23,7 +23,7 @@
   COUNT(*) / COUNT(DISTINCT s.voter) AS average_votes_per_voter
 FROM
   uniswap_ethereum.airdrop_claims AS c
-  LEFT JOIN dune.shot.dataset_votes_view AS s ON CAST(c.recipient AS varbinary) = s.voter -- join with the snapshot voters
+  LEFT JOIN dune.shot.dataset_votes_view AS s ON CAST(c.recipient AS varbinary) = s.voter -- join with the Snapshot voters
 WHERE
   space = 'uniswap'
 
@@ -84,3 +84,4 @@ FROM
 WHERE
   space = 'uniswap'
   AND created BETWEEN 1600291972 AND 1600291972 + 31556916 -- get the votes of airdrop recipients within twelve months of the airdrop (unix time)
+

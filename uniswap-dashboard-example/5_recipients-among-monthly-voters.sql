@@ -1,4 +1,4 @@
--- bar chart showing the unique airdrop voters among the total voters per month in the uniswap snapshot space
+-- bar chart showing the unique airdrop voters among the total voters per month in the Uniswap Snapshot space
 
 SELECT
   t1.month,
