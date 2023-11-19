@@ -1,12 +1,12 @@
 # Governance activity of airdrop recipients
 
 **An empirical analysis of 19 DAO airdrops with regard to the governance activity of the recipients**
-
 Master thesis University of Mittweida: Airdrops as a governance tool for DAOs?
 
--- abstract --
+_**Abstract:**
+Airdrops are a well-known incentive mechanism for blockchain protocols. In recent years, DAOs in particular have discovered "retroactive" airdrops that reward early adopters of a protocol. However, this type of token distribution is also considered a possible solution for centralisation or a lack of voting participation in DAOs. The topic of this thesis is therefore the effect of airdrops on governance activity in DAOs. For this purpose, 19 DAOs were empirically analysed.  We compare the voting participation of airdrop recipients on snapshot or (if available) on-chain with that of all token holders. We also analyse the distribution of airdrops, the holding period and the delegation share. We find that the participation of airdrop recipients is on average higher than that of non-airdrop recipients. However, whether airdrops are suitable as a governance instrument must be considered on a case-by-case basis._
 
-The data was retrieved using SQL queries on the [Dune Analytics](https://dune.com/) platform.
+The data was retrieved using SQL queries on the [Dune Analytics](https://dune.com/) platform. Examples for the queries can be found in the corresponding folder. 
 Links to the Dashboards on Dune Analytics:
 
 - [Optimism 1](https://dune.com/bitblondy/optimism1-governance-activity-of-airdrop-recipients)
